@@ -25,6 +25,7 @@ We then build a representation that captures those extracted features, using the
 
 
 #### Phase 3: Neural network modeling
-
-
+With the graph-based representations designed in Phase 2, we will construct a neural network model to enable geodesic embeddings of residue features into a high-dimensional vector spaces that capture interaction patterns among them. So far, we have envisioned using the following architectures, but this is to be determined in the future.
+-  **U-Net**
+-  **GNN**
 
