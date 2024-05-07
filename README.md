@@ -66,6 +66,6 @@ To run the programs for INTERACT-ppi models, you need to install the following l
      ```
    - **Arguments**
      - **`<filepath>`:** a path to a PDB or MMCIF file in a .pdb or .cif format.
-     - **`<chain IDs>`:** a list of the chain IDs, separated by commas, for getting the sequences in corresponding chains (e.g., "A,B"). Or, if user wants to get the sequence in every chain, then ``` -a ``` keyword can be used instead of the comma-separated list of chain IDs.
+     - **`<chain_ids>`:** a list of the chain IDs, separated by commas, for getting the sequences in corresponding chains (e.g., "A,B"). Or, if user wants to get the sequence in every chain, then ``` -a ``` keyword can be used instead of the comma-separated list of chain IDs.
 
 
