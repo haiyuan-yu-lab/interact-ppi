@@ -35,9 +35,9 @@ With the graph-based representations designed in Phase 2, we will construct a ne
 To run the programs for INTERACT-ppi models, you need to install the following libraries and software.
 
 ### Software & Libraries
-- **Python:** Any 3.x Python version works, but the latest versino is preferrable. You can download it [here](https://www.python.org/downloads)
-- **pip:** Check this [reference](https://pip.pypa.io/en/stable/installation/) to install this Python package installer.
-- **biopython**: Once ``` pip ``` package is intalled, install the Biopython library using the command ``` pip install biopython ```.
+- ```Python:``` Any 3.x Python version works, but the latest versino is preferrable. You can download it [here](https://www.python.org/downloads)
+- ```pip:``` Check this [reference](https://pip.pypa.io/en/stable/installation/) to install this Python package installer.
+- ```biopython```: Once ``` pip ``` package is intalled, install the Biopython library using the command ``` pip install biopython ```.
 
 
 ### Module Descriptions
