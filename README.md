@@ -4,6 +4,7 @@
 
 ## Project Overview
 
+
 ### Project Schematics
 To accomplish our project initiatives, we identify and extract interfaces from known protein-protein interactions for potential applications such as generating a target-specific binder with high confidence and accuracy and predicting the PPI interfaces. Based on these extracted interfaces, we envision constructing a pipeline mainly into three phases: feature extraction, representation construction, and neural network modeling.
 
@@ -28,4 +29,43 @@ We then build a representation that captures those extracted features, using the
 With the graph-based representations designed in Phase 2, we will construct a neural network model to enable geodesic embeddings of residue features into a high-dimensional vector spaces that capture interaction patterns among them. So far, we have envisioned using the following architectures, but this is to be determined in the future.
 -  **U-Net**
 -  **GNN**
+
+
+## Requirements
+To run the programs for INTERACT-ppi models, you need to install the following libraries and software.
+
+### Software & Libraries
+- **Python:** Any 3.x Python version works, but the latest versino is preferrable. You can download it [here](https://www.python.org/downloads)
+- **pip:** Check this [reference](https://pip.pypa.io/en/stable/installation/) to install this Python package installer.
+- **biopython**: Once ``` pip ``` package is intalled, install the Biopython library using the command ``` pip install biopython ```.
+
+
+### Module Descriptions
+1. **`extract_interacting_residues.py`**
+   - Driver script to extract residues participating in PPI interfaces using the functions defined in `interface_residue_extractor.py`.
+   
+   - **Program implementation example**
+     ```bash
+     python3 extract_interacting_residues.py <filepath> <chain IDs> <distance threshold>
+     ```
+   - **Arguments**
+     - **`<filepath>`:** Path to a text file in a .txt or .tsv format, containing a list of the paths to PDB or MMCIF files, separated by newline characters.
+     - **`<chain IDs>`:** a list of two chain IDs that are to be analyzed for PPI (e.g., "A,B").
+     - **`<distance threshold>`:** The maximum distance (in Angstroms) between residues in given chains to consider them as part of a PPI interface.
+
+2. **`interface_residue_extractor.py`**
+   - Defines modules to extract residues in two chains within a PDB or MMCIF that form interactions based on a given distance threshold.
+
+
+3. **`extract_sequences.py`**
+   - Extracts sequences from a PDB or MMCIF file for given chains.
+
+   - **Program Implementation example:**
+     ```bash
+     python3 extract_sequences.py <file_path> <chain_ids>
+     ```
+   - **Arguments**
+     - **`<filepath>`:** a path to a PDB or MMCIF file in a .pdb or .cif format.
+     - **`<chain IDs>`:** a list of the chain IDs, separated by commas, for getting the sequences in corresponding chains (e.g., "A,B"). Or, if user wants to get the sequence in every chain, then ``` -a ``` keyword can be used instead of the comma-separated list of chain IDs.
+
 
