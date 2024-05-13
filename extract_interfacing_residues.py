@@ -22,6 +22,7 @@ def main():
 
     for file_path in file_paths:
         file_path = file_path.strip()
+        print(file_path)
         results = get_interface_residues(file_path, chain_ids, args.threshold)
         print(f'Results for {file_path}: {results}')
 

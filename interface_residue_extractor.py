@@ -1,11 +1,11 @@
 from Bio.PDB import PDBParser, MMCIFParser, Polypeptide
 import numpy as np
 from util import *
+
+
 '''
 This module defines functions to extract residues from each chain that are parts of the protein-protein interaction.
 '''
-
-
 def get_interface_residues(file_path, chain_ids, threshold):
     '''
     Identify residues in given chain IDs that form a PPI within the given distance threshold.
@@ -39,18 +39,4 @@ def get_interface_residues(file_path, chain_ids, threshold):
                     interface_residues[chain_ids[1]].add(residue2.id[1])
     return {key: sorted(value) for key, value in interface_residues.items()}
 
-def find_ca_distance(residue1, residue2):
-    '''
-    Helper function to compute the distances between alpha carbons of given residues.
-
-    Args:
-    residue1 (Residue): A residue from the first chain in the list of chain IDs.
-    residue2 (residue): A residue from the second chain in the list of chain IDs.
-
-    Returns: A Euclidean distance between those residues.
-    '''
-    ca_1 = residue1["CA"].get_coord()
-    ca_2 = residue2["CA"].get_coord()
-    distance = np.linalg.norm(ca_1 - ca_2)
-    return distance
 
