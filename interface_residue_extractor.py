@@ -30,7 +30,7 @@ def get_interface_residues(file_path, chain_ids, threshold):
     interface_residues = {chain_ids[0]: set(), chain_ids[1]: set()}
     for residue1 in chain1:
         for residue2 in chain2:
-            if Polypeptide.is_aa(residue1) and Polypeptide.is_aa(residue2):
+            if is_aa(residue1) and is_aa(residue2):
                 min_distance = find_ca_distance(residue1, residue2)
                 if min_distance <= threshold:
                     interface_residues[chain_ids[0]].add(residue1.id[1])
