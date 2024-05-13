@@ -1,19 +1,10 @@
 from Bio.PDB import PDBParser, MMCIFParser, Polypeptide
 import numpy as np
-
+from util import *
 '''
 This module defines functions to extract residues from each chain that are parts of the protein-protein interaction.
 '''
 
-def parse_pdb(file_path):
-    file_ext = file_path.split('.')[-1]
-    if file_ext.lower() == 'pdb':
-        parser = PDBParser(QUIET=False)
-    elif file_ext.lower() == 'cif':
-        parser = MMCIFParser(QUIET=False)
-    else:
-        raise ValueError("Unsupported file format. Please use '.pdb' or '.cif' files.")
-    return parser
 
 def get_interface_residues(file_path, chain_ids, threshold):
     '''
