@@ -1,7 +1,5 @@
-from Bio.PDB import PDBParser, MMCIFParser, Polypeptide
-import numpy as np
 from util import *
-
+# imported PolyPeptide is_aa module in util.py
 
 '''
 This module defines functions to extract residues from each chain that are parts of the protein-protein interaction.

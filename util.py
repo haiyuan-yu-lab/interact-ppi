@@ -1,5 +1,6 @@
 from Bio.PDB import PDBParser, MMCIFParser
 import numpy as np
+from Bio.PDB.Polypeptide import is_aa
 
 def parse_pdb(file_path):
     file_ext = file_path.split('.')[-1]
