@@ -5,6 +5,6 @@ nav:
   - Project Overview: project_overview.md
   - Requirements: requirements.md
   - Modules:
-      - Extract Interacting Residues: modules/extract_interacting_residues.md
+      - Extract Interacting Residues: modules/esm2_extract_residue_embeddings.md
       - Interface Residue Extractor: modules/interface_residue_extractor.md
-      - Extract Sequences: modules/extract_sequences.md
+      - Extract Sequences: modules/sequence_extractor.md
