@@ -1,0 +1,10 @@
+site_name: INTERACT-PPI Documentation
+
+nav:
+  - Home: index.md
+  - Project Overview: project_overview.md
+  - Requirements: requirements.md
+  - Modules:
+      - Extract Interacting Residues: modules/extract_interacting_residues.md
+      - Interface Residue Extractor: modules/interface_residue_extractor.md
+      - Extract Sequences: modules/extract_sequences.md
