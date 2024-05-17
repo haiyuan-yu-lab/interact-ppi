@@ -9,7 +9,7 @@ We use a driver script defined in ```./driver/esm2_extract_residues.py``` to imp
 ### Example
 
 ```bash
-python3 esm2_extract_residues.py <filepath> <chain IDs> <distance threshold>
+python3 esm2_extract_residues.py <filepath> <chain IDs>
 ```
 
 ## Arguments
