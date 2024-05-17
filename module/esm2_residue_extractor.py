@@ -69,34 +69,3 @@ def read_h5(file_path):
 
     return embeddings
 
-def main():
-    
-    pdb_path = '/home/jc981073/interact-ppi/scratch/5ewz.pdb'
-    chain_ids = ['A','B']
-    file_ext = 'pdb'
-    protein_id = '5ewz'
-
-    sequence_dict = extract_sequences(pdb_path, chain_ids, file_ext, protein_id)
-    data = convert_to_list_of_tuples(sequence_dict)
-    print(f"chain A: {len(data[0][1])}")
-    print(f"chain B: {len(data[1][1])}")
-    model, alphabet = esm.pretrained.esm2_t6_8M_UR50D()
-    batch_converter = alphabet.get_batch_converter()
-    batch_labels, batch_strs, batch_tokens = batch_converter(data)
-    batch_lens = (batch_tokens != alphabet.padding_idx).sum(1)
-    model.eval()
-    print(f"batch_lens: {batch_lens}") 
-    print('----------------------------------------------')
-    output_embeddings, results = get_embeddings(data, model, batch_converter)
-    print(output_embeddings)
-    print('----------------------------------------------') 
-    write_h5(data, output_embeddings, protein_id)
-
-    h5_file = '5ewz.h5'
-
-    h5_embeddings = read_h5(h5_file)
-    
-
-
-if __name__ == "__main__":
-    main()
