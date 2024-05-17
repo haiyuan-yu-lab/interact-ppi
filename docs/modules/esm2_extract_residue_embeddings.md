@@ -1,6 +1,6 @@
 # Extract residues in PPI-interface [ESM-2](https://github.com/facebookresearch/esm)
 
-This module aims to extract residues that participate in PPI interfaces from given two chains, using ESM-2 Protein Language Model (PLM) instead of . 
+This module aims to extract residues that participate in PPI interfaces from given two chains, using ESM-2 Protein Language Model (PLM).  
 
 ## Implementation
 

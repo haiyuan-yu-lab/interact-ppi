@@ -4,7 +4,6 @@ nav:
   - Project Overview: project_overview.md
   - Requirements: requirements.md
   - Modules:
-      - PPI-interface residue extraction (Euclidean distance): modules/extract_interacting_residues.md
+      - PPI-interface residue extraction (Euclidean distance): modules/interface_residue_extractor.md
       - PPI-interface residue extraction (ESM-2): modules/esm2_extract_residue_embeddings.md
-      - Interface Residue Extractor: modules/interface_residue_extractor.md
-      - Extract Sequences: modules/sequence_extractor.md
+      - Sequence extractions for chains: modules/sequence_extractor.md
