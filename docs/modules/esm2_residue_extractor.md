@@ -15,5 +15,5 @@ python3 esm2_extract_residues.py <filepath> <chain IDs>
 ## Arguments
 
 - ```<filepath>```: Path to a textfile preferrably in a ```.txt``` or ```.tsv``` format, containing a list of the paths to PDB or MMCIF files, separated by newline characters. 
-- ```<chain_ids>```: a list of two chains IDs that are input for scrutinizing residues in the PPI interface.
+
 
