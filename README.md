@@ -8,7 +8,6 @@
 ### Project Schematics
 To accomplish our project initiatives, we identify and extract interfaces from known protein-protein interactions for potential applications such as generating a target-specific binder with high confidence and accuracy and predicting the PPI interfaces. Based on these extracted interfaces, we envision constructing a pipeline mainly into three phases: feature extraction, representation construction, and neural network modeling.
 
-![05_05 ML_subgroup meeting](https://github.com/haiyuan-yu-lab/interact-ppi/assets/35699839/1542712d-45bf-4a01-8b4d-67e53f1bef06)
 
 #### Phase 1: Feature extraction
 We first aim to compute the biophysical, geometric, and sequential features of interfaces to provide meaningful insights into their characteristics.
