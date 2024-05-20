@@ -19,7 +19,12 @@ def convert_to_list_of_tuples(sequence):
     return aa_list
 
 def generate_per_seq_embeddings(data, batch_labels, token_embeddings):
-    # Generate per-sequence embeddings
+    """
+    Helper function to get embeddings of the sequences in chains.
+
+    Returns:
+    
+    """
     sequence_embeddings = []
     for chain_id in [chain[0] for chain in data]:  # Extract chain IDs from data
         chain_start_idx = batch_labels.index(chain_id)

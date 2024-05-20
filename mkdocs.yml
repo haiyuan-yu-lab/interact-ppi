@@ -1,9 +1,0 @@
-site_name: INTERACT-PPI
-nav:
-  - Home: index.md
-  - Project Overview: project_overview.md
-  - Requirements: requirements.md
-  - Modules:
-      - PPI-interface residue extraction (Euclidean distance): modules/interface_residue_extractor.md
-      - PPI-interface residue extraction (ESM-2): modules/esm2_residue_extractor.md
-      - Sequence extractions for chains: modules/sequence_extractor.md
