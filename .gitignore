@@ -1,0 +1,58 @@
+# Ignore the entire scratch folder (e.g. testing data)
+scratch/
+
+# Ignore the entire venv folder (e.g. local virtual environment)
+venv/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Distribution / packaging
+.Python
+build/
+downloads/
+lib/
+lib64/
+var/
+
+# Unit test / coverage reports
+.pytest_cache/
+
+
+# Sphinx documentation
+docs/_build/
+docs/_static/
+docs/_templates/
+*.rst~
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+
+# Environments
+.env
+.venv
+env/
+venv/
+
+
+# mkdocs documentation
+/site
+
+
+# Temporary files
+*.tmp
+*.temp
+
+
+# Logs and databases
+*.log
+
+# Other
+*.temp
+*.swp
+*.DS_Store

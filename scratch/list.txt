@@ -1,3 +1,0 @@
-/home/jc981073/interact-ppi/scratch/1xyz.cif
-/home/jc981073/interact-ppi/scratch/1xyz.pdb
-/home/jc981073/interact-ppi/scratch/5ewz.pdb
