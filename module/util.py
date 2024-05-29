@@ -26,3 +26,11 @@ def find_ca_distance(residue1, residue2):
     ca_2 = residue2["CA"].get_coord()
     distance = np.linalg.norm(ca_1 - ca_2)
     return distance
+
+def extract_chain_sequence(structure, chain_id):
+    chain = structure[0][chain_id]
+    sequence = []
+    for residue in chain:
+        if is_aa(residue, standard=True):
+            sequence.append(residue)
+    return sequence

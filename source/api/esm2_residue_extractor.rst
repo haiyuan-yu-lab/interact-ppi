@@ -1,5 +1,6 @@
-Interfae-Residue extraction features (ESM-2)
-===========================
+Interface-Residue extraction features (ESM-2)
+=============================================
+
 
 .. automodule:: esm2_residue_extractor
     :members:

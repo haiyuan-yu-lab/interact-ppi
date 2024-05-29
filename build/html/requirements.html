@@ -7,7 +7,7 @@
   <title>Requirements &mdash; INTERACT-PPI 0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=9caa1682" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
 
   
   <!--[if lt IE 9]>
@@ -48,13 +48,20 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="project_overview.html">Project Overview</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Requirements</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Requirements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#python-libraries">Python Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#external-tools">External Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#utility-functions">Utility Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#additional-steps">Additional Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#summary-of-required-installations">Summary of Required Installations</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api/interface_residue_extractor.html">Interfae-Residue extraction features (Classic)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/interface_residue_extractor.html">Interface-Residue extraction features (Classic)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="api/interface_residue_extractor.html#interface_residue_extractor.get_interface_residues"><code class="docutils literal notranslate"><span class="pre">get_interface_residues()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="api/esm2_residue_extractor.html">Interfae-Residue extraction features (ESM-2)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/esm2_residue_extractor.html">Interface-Residue extraction features (ESM-2)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="api/esm2_residue_extractor.html#esm2_residue_extractor.convert_to_list_of_tuples"><code class="docutils literal notranslate"><span class="pre">convert_to_list_of_tuples()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/esm2_residue_extractor.html#esm2_residue_extractor.generate_per_seq_embeddings"><code class="docutils literal notranslate"><span class="pre">generate_per_seq_embeddings()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/esm2_residue_extractor.html#esm2_residue_extractor.get_embeddings"><code class="docutils literal notranslate"><span class="pre">get_embeddings()</span></code></a></li>
@@ -66,6 +73,21 @@
 <li class="toctree-l3"><a class="reference internal" href="api/sequence_extractor.html#sequence_extractor.extract_sequences"><code class="docutils literal notranslate"><span class="pre">extract_sequences()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/sequence_extractor.html#sequence_extractor.validate_chain_ids"><code class="docutils literal notranslate"><span class="pre">validate_chain_ids()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/sequence_extractor.html#sequence_extractor.validate_filepath"><code class="docutils literal notranslate"><span class="pre">validate_filepath()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/ppi_interface_residues_extractor.html">PPI-interface residue extractor (Classic)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/ppi_interface_residues_extractor.html#ppi_interface_residues_extractor.identify_interface_residues"><code class="docutils literal notranslate"><span class="pre">identify_interface_residues()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/ppi_interface_residues_extractor.html#ppi_interface_residues_extractor.parse_rsa_file"><code class="docutils literal notranslate"><span class="pre">parse_rsa_file()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/ppi_interface_residues_extractor.html#ppi_interface_residues_extractor.process_pdb_file"><code class="docutils literal notranslate"><span class="pre">process_pdb_file()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/ppi_interface_residues_extractor.html#ppi_interface_residues_extractor.run_naccess"><code class="docutils literal notranslate"><span class="pre">run_naccess()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/ppi_interface_residues_extractor.html#ppi_interface_residues_extractor.split_pdb_by_chain"><code class="docutils literal notranslate"><span class="pre">split_pdb_by_chain()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/ppi_interface_surface_mesh_generator.html">3D Feature Generation Functions (Classic)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/ppi_interface_surface_mesh_generator.html#ppi_interface_surface_mesh_generator.extract_interface_structure"><code class="docutils literal notranslate"><span class="pre">extract_interface_structure()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/ppi_interface_surface_mesh_generator.html#ppi_interface_surface_mesh_generator.generate_interface_surface_mesh"><code class="docutils literal notranslate"><span class="pre">generate_interface_surface_mesh()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/ppi_interface_surface_mesh_generator.html#ppi_interface_surface_mesh_generator.save_mesh"><code class="docutils literal notranslate"><span class="pre">save_mesh()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/ppi_interface_surface_mesh_generator.html#ppi_interface_surface_mesh_generator.save_structure"><code class="docutils literal notranslate"><span class="pre">save_structure()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -99,6 +121,78 @@
   <section id="requirements">
 <h1>Requirements<a class="headerlink" href="#requirements" title="Link to this heading"></a></h1>
 <p>These are the project requirements.</p>
+<section id="python-libraries">
+<h2>Python Libraries<a class="headerlink" href="#python-libraries" title="Link to this heading"></a></h2>
+<p>To enable all of the provided source codes, you need to install several Python libraries and external tools. Here’s a comprehensive list of the required installations:</p>
+<ul>
+<li><p><strong>Biopython</strong> for handling PDB files and structures:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">biopython</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>numpy</strong> for numerical operations:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>scipy</strong> for the ConvexHull function:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">scipy</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>meshio</strong> for reading and writing mesh files:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">meshio</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>pdb-tools</strong> for manipulating PDB files:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pdb</span><span class="o">-</span><span class="n">tools</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>torch</strong> for using the ESM model (fair-esm):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">torch</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>fair-esm</strong> for protein sequence embeddings:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">fair</span><span class="o">-</span><span class="n">esm</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>h5py</strong> for handling HDF5 files:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">h5py</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>matplotlib</strong> for plotting (if needed):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">matplotlib</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="external-tools">
+<h2>External Tools<a class="headerlink" href="#external-tools" title="Link to this heading"></a></h2>
+<p>NACCESS: This is a tool for calculating accessible surface areas of proteins. It needs to be downloaded and installed separately. You can find it <a class="reference external" href="http://wolf.bms.umist.ac.uk/naccess/">here</a>.</p>
+</section>
+<section id="utility-functions">
+<h2>Utility Functions<a class="headerlink" href="#utility-functions" title="Link to this heading"></a></h2>
+<p>Ensure that your utility functions (<cite>parse_pdb</cite>, <cite>aa_mapping</cite>, <cite>is_aa</cite>, <cite>extract_sequences</cite>) are properly defined in a module named <cite>util.py</cite> and <cite>sequence_extractor.py</cite>.</p>
+</section>
+<section id="additional-steps">
+<h2>Additional Steps<a class="headerlink" href="#additional-steps" title="Link to this heading"></a></h2>
+<p>NACCESS Installation: Download and follow the installation instructions for NACCESS from <a class="reference external" href="http://wolf.bms.umist.ac.uk/naccess/">here</a>.</p>
+<p>Utility Functions: Ensure that your <cite>util.py</cite> and <cite>sequence_extractor.py</cite> files are correctly placed in the same directory as your main script or in the Python path.</p>
+</section>
+<section id="summary-of-required-installations">
+<h2>Summary of Required Installations<a class="headerlink" href="#summary-of-required-installations" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Python Libraries</strong>: Install via pip install commands provided above.</p></li>
+<li><p><strong>External Tool (NACCESS)</strong>: Install manually from the provided link.</p></li>
+</ul>
+<p>Once everything is set up, you can run your scripts as usual, ensuring that you provide the correct file paths and parameters required by your functions.</p>
+</section>
 </section>
 
 

@@ -1,0 +1,11 @@
+sphinx
+sphinx-rtd-theme
+biopython
+numpy
+scipy
+meshio
+pdb-tools
+torch
+fair-esm
+h5py
+matplotlib

@@ -1,5 +1,6 @@
 Sequence Extraction features
-===========================
+============================
+
 
 .. automodule:: sequence_extractor
     :members:

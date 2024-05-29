@@ -4,10 +4,10 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interfae-Residue extraction features (Classic) &mdash; INTERACT-PPI 0.1 documentation</title>
+  <title>Interface-Residue extraction features (Classic) &mdash; INTERACT-PPI 0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=9caa1682" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
 
   
   <!--[if lt IE 9]>
@@ -22,7 +22,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Interfae-Residue extraction features (ESM-2)" href="esm2_residue_extractor.html" />
+    <link rel="next" title="Interface-Residue extraction features (ESM-2)" href="esm2_residue_extractor.html" />
     <link rel="prev" title="Modules" href="../modules.html" /> 
 </head>
 
@@ -50,11 +50,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../project_overview.html">Project Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../modules.html">Modules</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Interfae-Residue extraction features (Classic)</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Interface-Residue extraction features (Classic)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#interface_residue_extractor.get_interface_residues"><code class="docutils literal notranslate"><span class="pre">get_interface_residues()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="esm2_residue_extractor.html">Interfae-Residue extraction features (ESM-2)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="esm2_residue_extractor.html">Interface-Residue extraction features (ESM-2)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="esm2_residue_extractor.html#esm2_residue_extractor.convert_to_list_of_tuples"><code class="docutils literal notranslate"><span class="pre">convert_to_list_of_tuples()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="esm2_residue_extractor.html#esm2_residue_extractor.generate_per_seq_embeddings"><code class="docutils literal notranslate"><span class="pre">generate_per_seq_embeddings()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="esm2_residue_extractor.html#esm2_residue_extractor.get_embeddings"><code class="docutils literal notranslate"><span class="pre">get_embeddings()</span></code></a></li>
@@ -66,6 +66,21 @@
 <li class="toctree-l3"><a class="reference internal" href="sequence_extractor.html#sequence_extractor.extract_sequences"><code class="docutils literal notranslate"><span class="pre">extract_sequences()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="sequence_extractor.html#sequence_extractor.validate_chain_ids"><code class="docutils literal notranslate"><span class="pre">validate_chain_ids()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="sequence_extractor.html#sequence_extractor.validate_filepath"><code class="docutils literal notranslate"><span class="pre">validate_filepath()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ppi_interface_residues_extractor.html">PPI-interface residue extractor (Classic)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ppi_interface_residues_extractor.html#ppi_interface_residues_extractor.identify_interface_residues"><code class="docutils literal notranslate"><span class="pre">identify_interface_residues()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ppi_interface_residues_extractor.html#ppi_interface_residues_extractor.parse_rsa_file"><code class="docutils literal notranslate"><span class="pre">parse_rsa_file()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ppi_interface_residues_extractor.html#ppi_interface_residues_extractor.process_pdb_file"><code class="docutils literal notranslate"><span class="pre">process_pdb_file()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ppi_interface_residues_extractor.html#ppi_interface_residues_extractor.run_naccess"><code class="docutils literal notranslate"><span class="pre">run_naccess()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ppi_interface_residues_extractor.html#ppi_interface_residues_extractor.split_pdb_by_chain"><code class="docutils literal notranslate"><span class="pre">split_pdb_by_chain()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ppi_interface_surface_mesh_generator.html">3D Feature Generation Functions (Classic)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ppi_interface_surface_mesh_generator.html#ppi_interface_surface_mesh_generator.extract_interface_structure"><code class="docutils literal notranslate"><span class="pre">extract_interface_structure()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ppi_interface_surface_mesh_generator.html#ppi_interface_surface_mesh_generator.generate_interface_surface_mesh"><code class="docutils literal notranslate"><span class="pre">generate_interface_surface_mesh()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ppi_interface_surface_mesh_generator.html#ppi_interface_surface_mesh_generator.save_mesh"><code class="docutils literal notranslate"><span class="pre">save_mesh()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ppi_interface_surface_mesh_generator.html#ppi_interface_surface_mesh_generator.save_structure"><code class="docutils literal notranslate"><span class="pre">save_structure()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -87,7 +102,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../modules.html">Modules</a></li>
-      <li class="breadcrumb-item active">Interfae-Residue extraction features (Classic)</li>
+      <li class="breadcrumb-item active">Interface-Residue extraction features (Classic)</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/api/interface_residue_extractor.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -97,9 +112,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="interfae-residue-extraction-features-classic">
-<h1>Interfae-Residue extraction features (Classic)<a class="headerlink" href="#interfae-residue-extraction-features-classic" title="Link to this heading"></a></h1>
-<dl class="py function" id="module-interface_residue_extractor">
+  <section id="module-interface_residue_extractor">
+<span id="interface-residue-extraction-features-classic"></span><h1>Interface-Residue extraction features (Classic)<a class="headerlink" href="#module-interface_residue_extractor" title="Link to this heading"></a></h1>
+<dl class="py function">
 <dt class="sig sig-object py" id="interface_residue_extractor.get_interface_residues">
 <span class="sig-prename descclassname"><span class="pre">interface_residue_extractor.</span></span><span class="sig-name descname"><span class="pre">get_interface_residues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chain_ids</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/interface_residue_extractor.html#get_interface_residues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#interface_residue_extractor.get_interface_residues" title="Link to this definition"></a></dt>
 <dd><p>Identify residues in given chain IDs that form a PPI within the given distance threshold.</p>
@@ -118,7 +133,7 @@ a dictionary that contains the indices of the residues in each chain that are pa
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../modules.html" class="btn btn-neutral float-left" title="Modules" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="esm2_residue_extractor.html" class="btn btn-neutral float-right" title="Interfae-Residue extraction features (ESM-2)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="esm2_residue_extractor.html" class="btn btn-neutral float-right" title="Interface-Residue extraction features (ESM-2)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

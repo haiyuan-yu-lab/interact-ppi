@@ -10,9 +10,15 @@ import sys
 import sphinx_rtd_theme
 
 
+#sys.path.insert(0, os.path.abspath(os.path.join("..", "..", "module")))
 
-module_path = os.path.abspath('../module')
-sys.path.insert(0, module_path)
+sys.path.insert(0, os.path.abspath('../module'))
+
+# Print debugging information
+print("Current working directory:", os.getcwd())
+print("Module path:", os.path.abspath('../module'))
+print("sys.path:", sys.path)
+
 
 
 project = 'INTERACT-PPI'
@@ -23,16 +29,8 @@ release = '0.1'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = [
-    'sphinx.ext.autodoc',
-    'sphinx.ext.napoleon',
-    'sphinx.ext.autosummary',
-    'sphinx_autodoc_typehints',
-    'sphinx.ext.viewcode'
-    
-]
 
-
+extensions = ["sphinx.ext.autodoc", "sphinx.ext.viewcode", "sphinx.ext.napoleon"]
 
 templates_path = ['_templates']
 exclude_patterns = []

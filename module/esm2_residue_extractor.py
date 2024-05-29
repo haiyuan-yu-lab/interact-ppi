@@ -65,6 +65,7 @@ def read_h5(file_path):
             embeddings[key] = np.array(hf[key])
     
     print(type(embeddings))
+    
     # Investigate the contents
     for key, value in embeddings.items():
         print(f"Chain ID: {key}")

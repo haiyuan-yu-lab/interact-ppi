@@ -1,5 +1,6 @@
-Interfae-Residue extraction features (Classic)
-===========================
+Interface-Residue extraction features (Classic)
+===============================================
+
 
 .. automodule:: interface_residue_extractor
     :members:
