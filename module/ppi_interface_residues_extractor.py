@@ -8,7 +8,6 @@ def run_naccess(pdb_file, output_dir):
     os.makedirs(output_dir, exist_ok=True)
 
     # Change to the output directory to run NACCESS
-    original_dir = os.getcwd()
     os.chdir(output_dir)
 
     # Run NACCESS

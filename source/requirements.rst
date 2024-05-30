@@ -44,6 +44,10 @@ To enable the program defined within this repository, please install several Pyt
 
     pip install matplotlib
 
+- **pandas** for utilizing DataFrame object::
+
+    pip install pandas
+
 External Tools
 --------------
 

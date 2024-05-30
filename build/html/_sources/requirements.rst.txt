@@ -1,18 +1,18 @@
 Requirements
 ============
 
-These are the project requirements.
+Below outlines all the necessary Python & other libraries and utilities 
 
 Python Libraries
 ----------------
 
-To enable all of the provided source codes, you need to install several Python libraries and external tools. Here’s a comprehensive list of the required installations:
+To enable the program defined within this repository, please install several Python libraries and external tools. Here’s a comprehensive list of the required installations:
 
 - **Biopython** for handling PDB files and structures::
 
     pip install biopython
 
-- **numpy** for numerical operations::
+- **numpy** for various numerical operations::
 
     pip install numpy
 
@@ -28,21 +28,25 @@ To enable all of the provided source codes, you need to install several Python l
 
     pip install pdb-tools
 
-- **torch** for using the ESM model (fair-esm)::
+- **torch** to enable using the ESM model (fair-esm)::
 
     pip install torch
 
-- **fair-esm** for protein sequence embeddings::
+- **fair-esm** for using the ESM model::
 
     pip install fair-esm
 
-- **h5py** for handling HDF5 files::
+- **h5py** for using HDF5 file I/O functions::
 
     pip install h5py
 
-- **matplotlib** for plotting (if needed)::
+- **matplotlib** for plotting the results::
 
     pip install matplotlib
+
+- **pandas** for utilizing DataFrame object::
+
+    pip install pandas
 
 External Tools
 --------------
