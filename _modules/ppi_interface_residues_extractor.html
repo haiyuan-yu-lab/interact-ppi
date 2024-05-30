@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ppi_interface_residues_extractor &mdash; INTERACT-PPI 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=2709fde1"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            INTERACT-PPI
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../project_overview.html">Project Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../requirements.html#python-libraries">Python Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../requirements.html#external-tools">External Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../requirements.html#utility-functions">Utility Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../requirements.html#additional-steps">Additional Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../requirements.html#summary-of-required-installations">Summary of Required Installations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/interface_residue_extractor.html">Interface-Residue extraction features (Classic)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/interface_residue_extractor.html#interface_residue_extractor.get_interface_residues"><code class="docutils literal notranslate"><span class="pre">get_interface_residues()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/esm2_residue_extractor.html">Interface-Residue extraction features (ESM-2)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/esm2_residue_extractor.html#esm2_residue_extractor.convert_to_list_of_tuples"><code class="docutils literal notranslate"><span class="pre">convert_to_list_of_tuples()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/esm2_residue_extractor.html#esm2_residue_extractor.generate_per_seq_embeddings"><code class="docutils literal notranslate"><span class="pre">generate_per_seq_embeddings()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/esm2_residue_extractor.html#esm2_residue_extractor.get_embeddings"><code class="docutils literal notranslate"><span class="pre">get_embeddings()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/esm2_residue_extractor.html#esm2_residue_extractor.read_h5"><code class="docutils literal notranslate"><span class="pre">read_h5()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/esm2_residue_extractor.html#esm2_residue_extractor.write_h5"><code class="docutils literal notranslate"><span class="pre">write_h5()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/sequence_extractor.html">Sequence Extraction features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/sequence_extractor.html#sequence_extractor.extract_sequences"><code class="docutils literal notranslate"><span class="pre">extract_sequences()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sequence_extractor.html#sequence_extractor.validate_chain_ids"><code class="docutils literal notranslate"><span class="pre">validate_chain_ids()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sequence_extractor.html#sequence_extractor.validate_filepath"><code class="docutils literal notranslate"><span class="pre">validate_filepath()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/ppi_interface_residues_extractor.html">PPI-interface residue extractor (Classic)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/ppi_interface_residues_extractor.html#ppi_interface_residues_extractor.identify_interface_residues"><code class="docutils literal notranslate"><span class="pre">identify_interface_residues()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/ppi_interface_residues_extractor.html#ppi_interface_residues_extractor.parse_rsa_file"><code class="docutils literal notranslate"><span class="pre">parse_rsa_file()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/ppi_interface_residues_extractor.html#ppi_interface_residues_extractor.process_pdb_file"><code class="docutils literal notranslate"><span class="pre">process_pdb_file()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/ppi_interface_residues_extractor.html#ppi_interface_residues_extractor.run_naccess"><code class="docutils literal notranslate"><span class="pre">run_naccess()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/ppi_interface_residues_extractor.html#ppi_interface_residues_extractor.split_pdb_by_chain"><code class="docutils literal notranslate"><span class="pre">split_pdb_by_chain()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/ppi_interface_surface_mesh_generator.html">3D Feature Generation Functions (Classic)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/ppi_interface_surface_mesh_generator.html#ppi_interface_surface_mesh_generator.extract_interface_structure"><code class="docutils literal notranslate"><span class="pre">extract_interface_structure()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/ppi_interface_surface_mesh_generator.html#ppi_interface_surface_mesh_generator.generate_interface_surface_mesh"><code class="docutils literal notranslate"><span class="pre">generate_interface_surface_mesh()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/ppi_interface_surface_mesh_generator.html#ppi_interface_surface_mesh_generator.save_mesh"><code class="docutils literal notranslate"><span class="pre">save_mesh()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/ppi_interface_surface_mesh_generator.html#ppi_interface_surface_mesh_generator.save_structure"><code class="docutils literal notranslate"><span class="pre">save_structure()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">INTERACT-PPI</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Module code</a></li>
+      <li class="breadcrumb-item active">ppi_interface_residues_extractor</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for ppi_interface_residues_extractor</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">from</span> <span class="nn">util</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">sequence_extractor</span> <span class="kn">import</span> <span class="n">extract_sequences</span>
+
+<div class="viewcode-block" id="run_naccess">
+<a class="viewcode-back" href="../api/ppi_interface_residues_extractor.html#ppi_interface_residues_extractor.run_naccess">[docs]</a>
+<span class="k">def</span> <span class="nf">run_naccess</span><span class="p">(</span><span class="n">pdb_file</span><span class="p">,</span> <span class="n">output_dir</span><span class="p">):</span>
+    <span class="c1"># Ensure the output directory exists</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># Change to the output directory to run NACCESS</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">output_dir</span><span class="p">)</span>
+
+    <span class="c1"># Run NACCESS</span>
+    <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;naccess </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">pdb_file</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Running command: </span><span class="si">{</span><span class="n">command</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">original_dir</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">returncode</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;NACCESS failed for </span><span class="si">{</span><span class="n">pdb_file</span><span class="si">}</span><span class="s2">. Error: </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;NACCESS failed for </span><span class="si">{</span><span class="n">pdb_file</span><span class="si">}</span><span class="s2">. Please check the file format and contents.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Check if the expected RSA file was generated</span>
+    <span class="n">rsa_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">pdb_file</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.pdb&#39;</span><span class="p">,</span> <span class="s1">&#39;.rsa&#39;</span><span class="p">))</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">rsa_file</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RSA file </span><span class="si">{</span><span class="n">rsa_file</span><span class="si">}</span><span class="s2"> not found for </span><span class="si">{</span><span class="n">pdb_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">rsa_file</span></div>
+
+
+<div class="viewcode-block" id="parse_rsa_file">
+<a class="viewcode-back" href="../api/ppi_interface_residues_extractor.html#ppi_interface_residues_extractor.parse_rsa_file">[docs]</a>
+<span class="k">def</span> <span class="nf">parse_rsa_file</span><span class="p">(</span><span class="n">rsa_filename</span><span class="p">):</span>
+    <span class="n">sasa_data</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Reading RSA file: </span><span class="si">{</span><span class="n">rsa_filename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">rsa_filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;RES&#39;</span><span class="p">):</span>
+                    <span class="n">parts</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+                    <span class="n">residue</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                    <span class="n">chain</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+                    <span class="n">res_num</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+                    <span class="n">asa</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+                    <span class="n">rsa</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+                    <span class="n">sasa_data</span><span class="p">[(</span><span class="n">chain</span><span class="p">,</span> <span class="n">res_num</span><span class="p">)]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;residue&#39;</span><span class="p">:</span> <span class="n">residue</span><span class="p">,</span> <span class="s1">&#39;asa&#39;</span><span class="p">:</span> <span class="n">asa</span><span class="p">,</span> <span class="s1">&#39;rsa&#39;</span><span class="p">:</span> <span class="n">rsa</span><span class="p">}</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error reading RSA file </span><span class="si">{</span><span class="n">rsa_filename</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">sasa_data</span></div>
+
+
+<div class="viewcode-block" id="identify_interface_residues">
+<a class="viewcode-back" href="../api/ppi_interface_residues_extractor.html#ppi_interface_residues_extractor.identify_interface_residues">[docs]</a>
+<span class="k">def</span> <span class="nf">identify_interface_residues</span><span class="p">(</span><span class="n">isolated_sasa</span><span class="p">,</span> <span class="n">complex_sasa</span><span class="p">,</span> <span class="n">rsa_threshold</span><span class="o">=</span><span class="mf">15.0</span><span class="p">,</span> <span class="n">asa_decrease</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+    <span class="n">interface_residues</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">iso_data</span> <span class="ow">in</span> <span class="n">isolated_sasa</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">complex_sasa</span><span class="p">:</span>
+            <span class="n">com_data</span> <span class="o">=</span> <span class="n">complex_sasa</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">iso_data</span><span class="p">[</span><span class="s1">&#39;rsa&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">rsa_threshold</span> <span class="ow">and</span> <span class="p">(</span><span class="n">iso_data</span><span class="p">[</span><span class="s1">&#39;asa&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">com_data</span><span class="p">[</span><span class="s1">&#39;asa&#39;</span><span class="p">])</span> <span class="o">&gt;=</span> <span class="n">asa_decrease</span><span class="p">:</span>
+                <span class="n">chain</span> <span class="o">=</span> <span class="n">key</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">chain</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">interface_residues</span><span class="p">:</span>
+                    <span class="n">interface_residues</span><span class="p">[</span><span class="n">chain</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="n">interface_residues</span><span class="p">[</span><span class="n">chain</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">aa_mapping</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">iso_data</span><span class="p">[</span><span class="s1">&#39;residue&#39;</span><span class="p">],</span> <span class="s1">&#39;?&#39;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">interface_residues</span></div>
+
+
+<div class="viewcode-block" id="split_pdb_by_chain">
+<a class="viewcode-back" href="../api/ppi_interface_residues_extractor.html#ppi_interface_residues_extractor.split_pdb_by_chain">[docs]</a>
+<span class="k">def</span> <span class="nf">split_pdb_by_chain</span><span class="p">(</span><span class="n">pdb_file</span><span class="p">,</span> <span class="n">chain_ids</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">chain_id</span> <span class="ow">in</span> <span class="n">chain_ids</span><span class="p">:</span>
+        <span class="n">output_file</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">pdb_file</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">_chain</span><span class="si">{</span><span class="n">chain_id</span><span class="si">}</span><span class="s2">.pdb&quot;</span>
+        <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;pdb_selchain -</span><span class="si">{</span><span class="n">chain_id</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">pdb_file</span><span class="si">}</span><span class="s2"> &gt; </span><span class="si">{</span><span class="n">output_file</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Running command: </span><span class="si">{</span><span class="n">command</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># pdb_selchain -A /home/jc981073/interact-ppi/scratch/5ewz.pdb &gt; /home/jc981073/interact-ppi/scratch/5ewz_chainA.pdb</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="n">out_id</span> <span class="o">=</span> <span class="n">output_file</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span></div>
+
+
+
+<div class="viewcode-block" id="process_pdb_file">
+<a class="viewcode-back" href="../api/ppi_interface_residues_extractor.html#ppi_interface_residues_extractor.process_pdb_file">[docs]</a>
+<span class="k">def</span> <span class="nf">process_pdb_file</span><span class="p">(</span><span class="n">pdb_file</span><span class="p">,</span> <span class="n">chain_ids</span><span class="p">):</span>
+    <span class="n">pdb_id</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">pdb_file</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">file_ext</span> <span class="o">=</span> <span class="n">pdb_file</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+    <span class="n">sequences</span> <span class="o">=</span> <span class="n">extract_sequences</span><span class="p">(</span><span class="n">pdb_file</span><span class="p">,</span> <span class="n">chain_ids</span><span class="p">,</span> <span class="n">file_ext</span><span class="p">,</span> <span class="n">pdb_id</span><span class="p">)</span>
+
+    <span class="n">split_pdb_by_chain</span><span class="p">(</span><span class="n">pdb_file</span><span class="p">,</span> <span class="n">chain_ids</span><span class="p">)</span>
+
+    <span class="n">isolated_rsa_files</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">chain_id</span> <span class="ow">in</span> <span class="n">chain_ids</span><span class="p">:</span>
+        <span class="n">chain_pdb_file</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">pdb_file</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">_chain</span><span class="si">{</span><span class="n">chain_id</span><span class="si">}</span><span class="s2">.pdb&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Running NACCESS for chain </span><span class="si">{</span><span class="n">chain_id</span><span class="si">}</span><span class="s2"> PDB file: </span><span class="si">{</span><span class="n">chain_pdb_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">rsa_file</span> <span class="o">=</span> <span class="n">run_naccess</span><span class="p">(</span><span class="n">chain_pdb_file</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">pdb_file</span><span class="p">))</span>
+        <span class="n">isolated_rsa_files</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rsa_file</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Running NACCESS for complex PDB file: </span><span class="si">{</span><span class="n">pdb_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">complex_rsa_file</span> <span class="o">=</span> <span class="n">run_naccess</span><span class="p">(</span><span class="n">pdb_file</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">pdb_file</span><span class="p">))</span>
+
+    <span class="n">isolated_sasa</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">rsa_file</span> <span class="ow">in</span> <span class="n">isolated_rsa_files</span><span class="p">:</span>
+        <span class="n">isolated_sasa</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">parse_rsa_file</span><span class="p">(</span><span class="n">rsa_file</span><span class="p">))</span>
+
+    <span class="n">complex_sasa</span> <span class="o">=</span> <span class="n">parse_rsa_file</span><span class="p">(</span><span class="n">complex_rsa_file</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">identify_interface_residues</span><span class="p">(</span><span class="n">isolated_sasa</span><span class="p">,</span> <span class="n">complex_sasa</span><span class="p">)</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Yu lab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
